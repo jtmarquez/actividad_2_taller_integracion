@@ -13,7 +13,7 @@ def response_status():
 @app.route("/info", methods=['GET'])
 def response_info():
   response_obj = {
-    'url': request.base_url,
+    'url': request.url_root,
   }
 
   return jsonify(response_obj), 200
